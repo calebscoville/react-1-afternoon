@@ -1,6 +1,14 @@
 import React, { Component } from 'react';
 
-class FilterObject extends Component {
+export default class FilterObject extends Component {
+
+    constructor() {
+        super();
+
+        this.state = {
+            
+        }
+    }
   render() {
       return (
     <p> FilterObject </p>
@@ -8,4 +16,3 @@ class FilterObject extends Component {
   }
 }
 
-export default FilterObject;
