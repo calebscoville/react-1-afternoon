@@ -6,7 +6,7 @@ export default class FilterString extends Component {
         super();
 
         this.state = {
-            names: ['James', 'Jessica', 'Melody', 'Tyler', 'Blake', Jennifer, Mark, 'Maddy'],
+            names: ['James', 'Jessica', 'Melody', 'Tyler', 'Blake', 'Jennifer', 'Mark', 'Maddy'],
             userInput: '',
             filteredNames: []
         };
@@ -34,11 +34,11 @@ this.setState({ filteredName: filteredNames });
       return (
     <div className="puzzleBox filterStringPB">
     <h4> Filter String </h4>
-    <span className="puzzleText"> Names: {JSON.stringify(this.state.names, null, 10) }</span>
-    
+    <span className="puzzleText"> Names: {JSON.stringify(this.state.names, null, 10) } </span>
+    <input className="inputLine" onChange={ (e) => this.handleChange(e.target.value) }></input>
+    <button className="confirmationButton" onClick={ () => this.filterNames(this.state.userInput) }> Filter </button>
+    <span className="resultsBox filterStringRB"> Filtered Names: { JSON.stringify(this.state.filteredNames, null, 10) } </span>
     </div>
       )
   }
 }
-
-export default FilterString;
